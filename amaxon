@@ -1,0 +1,32 @@
+package com.capgemnini;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Amazon {
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\RKUMA301\\Documents\\Selenium jar\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
+		driver.get("https://www.amazon.in/");
+		
+		driver.findElement(By.xpath("//*[@id=\"nav-link-shopall\"]/span[2]")).click();
+		
+		driver.findElement(By.xpath("//*[@id=\"shopAllLinks\"]/tbody/tr/td[2]/div[1]/ul/li[4]/a")).click();
+	
+		
+		driver.findElement(By.xpath("//*[@id=\"anonCarousel3\"]/ol/li[1]/div[1]/a/span")).click();
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"a-autoid-0-announce\"]")).click();
+		
+		
+	}
+
+}
+
+
