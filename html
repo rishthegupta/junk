@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Project Page</title>
+	<script type="text/javascript">
+		function validateAndSuccess()
+		{
+			var name=document.getElementById("name");
+			
+			  if(name.value=="")
+				{
+				  window.alert("Please enter Employee Name"); 
+				  name.focus();  
+				}
+			  else
+				{
+				  
+				  window.location="success.html";
+				  
+				}
+
+			
+			
+		}
+	
+	</script>
+</head>
+
+<body>
+<center>
+<table >
+	<tr>
+		<th>Enter Name</th>
+		<th><input type="text" id="name"></th>
+	</tr>
+	<tr>
+		<th>Project Name</th>
+		<th>
+			<form>
+				<input type="checkbox" name="project1" value="java">Java<br>
+				<input type="checkbox" name="project2" value="Python">Python<br>
+				<input type="checkbox" name="project3" value="bigData">BigData<br>
+				<input type="button" value="submit" onclick="validateAndSuccess()">
+			</form>
+		</th>
+	</tr>
+	
+</table>
+</center>
+
+</body>
+
+</html>
